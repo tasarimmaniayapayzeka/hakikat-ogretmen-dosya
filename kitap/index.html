@@ -514,7 +514,7 @@ body{margin:0;background:radial-gradient(ellipse at 50% 35%,#1b2c4f 0%,var(--mas
   ileri.addEventListener('click',function(){pf.flipNext();});
   document.getElementById('basa').addEventListener('click',function(){pf.flip(2);});
   document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')pf.flipNext();if(e.key==='ArrowLeft')pf.flipPrev();});
-  [].forEach.call(document.querySelectorAll('[data-git]'),function(b){b.addEventListener('click',function(e){e.stopPropagation();pf.flip(parseInt(b.dataset.git,10));});});
+  [].forEach.call(document.querySelectorAll('[data-git]'),function(b){['mousedown','pointerdown','touchstart'].forEach(function(ev){b.addEventListener(ev,function(e){e.stopPropagation();},{passive:true});});b.addEventListener('click',function(e){e.stopPropagation();e.preventDefault();pf.flip(parseInt(b.dataset.git,10));});});
   window.kitap=pf;
 })();
 </script>
