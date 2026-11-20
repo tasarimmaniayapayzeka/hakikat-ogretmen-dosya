@@ -676,3 +676,5 @@ footer.foot img{height:26px;width:auto}
 .phone > .in.koyu-e{background:#0a1426;color:#fff}
 .phone > .in.vs-ekran:not(.koyu-e){background:var(--paper)}
 .phone > .in.koyu-e .vs-soru{color:#fff}
+
+@media (max-width:860px),(hover:none){.tilt{--rx:0deg!important;--ry:0deg!important;transform:none}.kapak-vis .vid-kart,.ak-v .phone,.kv-telefon,.ugc-hero img{--rx:0deg;--ry:0deg}}
