@@ -18,3 +18,14 @@
     els.forEach(function(el){if(el.classList.contains('bekle'))io.observe(el)});
   }
 })();
+// 3B eğim: imleç kartın üstündeyken hafifçe döner, çıkınca kendi açısına döner
+(function(){
+  var az=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dokunmatik=window.matchMedia&&window.matchMedia('(hover: none)').matches;
+  if(az||dokunmatik)return;
+  [].forEach.call(document.querySelectorAll('[data-tilt]'),function(el){
+    var cs=getComputedStyle(el),rx0=cs.getPropertyValue('--rx')||'0deg',ry0=cs.getPropertyValue('--ry')||'0deg';
+    el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.setProperty('--ry',(x*14).toFixed(2)+'deg');el.style.setProperty('--rx',(-y*10).toFixed(2)+'deg');});
+    el.addEventListener('pointerleave',function(){el.style.setProperty('--ry',ry0.trim());el.style.setProperty('--rx',rx0.trim());});
+  });
+})();
