@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Yapacaklarımız · Hakikat Öğretmen</title>
+<meta name="description" content="Hakikat Öğretmen için yapacağımız işler, sayfaları çevrilen bir kitapta.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Yapacaklarımız · Hakikat Öğretmen">
+<meta property="og:description" content="Yeni site, veli asistanı, reklam sayfaları, sosyal medya, video ve pazarlama. Sayfa sayfa.">
+<meta property="og:url" content="https://tasarimmaniayapayzeka.github.io/hakikat-ogretmen-dosya/kitap/">
+<meta property="og:image" content="https://tasarimmaniayapayzeka.github.io/hakikat-ogretmen-dosya/img/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1528">
+<link rel="icon" href="../img/hakikat-logo-ig.png">
+<link rel="apple-touch-icon" href="../img/hakikat-logo-ig.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Gabarito:wght@600;700&family=Caveat:wght@600&display=swap">
+<style>
+/* Kitap: lacivert ciltli kareli okul defteri. Sol sayfa = örnek tasarım, sağ sayfa = ne olacak. */
+:root{--masa:#0b1528;--lac:#142645;--altin:#c8921a;--altin-a:#e8b746;--kagit:#fbfcfe;--kare:#e3eaf4;--kenar:#e2675c;--yazi:#142645;--yazi2:#3d4b66;--soluk:#6a7790;
+--s2:#13a3a8;--s3:#e8553e;--s4:#3c9a3a;--s5:#7a3fa8;
+--display:"Gabarito","Segoe UI",system-ui,sans-serif;--body:"Figtree","Segoe UI",system-ui,sans-serif;--el:"Caveat","Segoe Print",cursive}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:radial-gradient(ellipse at 50% 35%,#1b2c4f 0%,var(--masa) 70%);color:#e9eef8;font-family:var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.ust{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px max(18px,env(safe-area-inset-right,0px)) 6px max(18px,env(safe-area-inset-left,0px))}
+.ust img{height:28px;width:auto}
+.ust a{color:#c5cfe2;font-size:.86rem;text-decoration:none;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.ust a:hover{border-color:var(--altin-a);color:#fff}
+.sahne{display:flex;flex-direction:column;align-items:center;padding:6px max(10px,env(safe-area-inset-right,0px)) 18px max(10px,env(safe-area-inset-left,0px))}
+.kitap-kap{width:min(1180px,96vw,calc((100dvh - 150px) * 1.486));position:relative}
+.kitap-kap::after{content:"";position:absolute;left:6%;right:6%;bottom:-18px;height:30px;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent);z-index:-1}
+#kitap{margin:0 auto}
+.kontrol{display:flex;align-items:center;gap:14px;margin-top:16px;flex-wrap:wrap;justify-content:center}
+.kontrol button{font:700 .95rem var(--body);color:var(--lac);background:var(--altin-a);border:0;border-radius:999px;padding:10px 20px;cursor:pointer;white-space:nowrap}
+.kontrol button.ikinci{background:transparent;color:#e9eef8;border:1px solid rgba(255,255,255,.3)}
+.kontrol button:disabled{opacity:.35;cursor:default}
+.kontrol button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.kontrol span{font-variant-numeric:tabular-nums;color:#c5cfe2;font-size:.9rem;min-width:110px;text-align:center}
+.ipucu{color:#93a0b8;font-size:.8rem;margin-top:8px;text-align:center}
+
+/* sayfalar */
+.page{background:var(--kagit);color:var(--yazi);overflow:hidden;container-type:size}
+.page .ic{position:absolute;inset:0;padding:6.5cqw 7cqw 8cqw;display:flex;flex-direction:column;gap:2.2cqh;font-size:2.75cqw;line-height:1.45}
+.page.kare{background-color:var(--kagit);background-image:linear-gradient(var(--kare) 1px,transparent 1px),linear-gradient(90deg,var(--kare) 1px,transparent 1px);background-size:4.6cqw 4.6cqw}
+.page.kare.sol .ic{padding-left:11cqw}
+.page.kare.sol::before{content:"";position:absolute;top:0;bottom:0;left:8cqw;border-left:2px solid var(--kenar);opacity:.55}
+.page.sag{box-shadow:inset 18px 0 30px -22px rgba(20,38,69,.35)}
+.page.sol{box-shadow:inset -18px 0 30px -22px rgba(20,38,69,.35)}
+.page h2{font-family:var(--display);font-size:6.4cqw;line-height:1.08;margin:0;color:var(--lac);text-wrap:balance}
+.page h3{font-family:var(--display);font-size:4.2cqw;line-height:1.15;margin:0;color:var(--lac)}
+.page p{margin:0}
+.bolum{display:flex;align-items:center;gap:2cqw;font-weight:700;color:#7a5608;font-size:2.6cqw}
+.bolum i{font-style:normal;font-family:var(--display);background:var(--lac);color:var(--altin-a);border-radius:1.2cqw;padding:.2cqw 1.6cqw}
+.not{font-family:var(--el);font-size:4.6cqw;color:var(--kenar);line-height:1;transform:rotate(-3deg);display:inline-block}
+.sayfa-no{position:absolute;bottom:3.4cqw;font-size:2.2cqw;color:var(--soluk);font-variant-numeric:tabular-nums}
+.sol .sayfa-no{left:11cqw}.sag .sayfa-no{right:7cqw}
+.gorsel{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative}
+.page img{height:auto}
+.gorsel img{max-width:100%;max-height:100%;object-fit:contain;border-radius:1.6cqw;box-shadow:0 2cqw 5cqw -2.5cqw rgba(20,38,69,.55)}
+.gorsel .etiket{position:absolute;top:-1cqw;right:1cqw;background:#fff6c9;color:#5b4507;font-family:var(--el);font-size:4cqw;padding:.6cqw 2.4cqw;transform:rotate(4deg);box-shadow:0 1cqw 2cqw -1cqw rgba(0,0,0,.35)}
+.tel{height:100%;aspect-ratio:9/19.5;max-width:100%;border:1.4cqw solid #10192b;border-radius:5cqw;overflow:hidden;background:#10192b;box-shadow:0 3cqw 6cqw -3cqw rgba(20,38,69,.7)}
+.tel img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:3.6cqw;box-shadow:none}
+.teller{display:flex;gap:3cqw;height:100%;align-items:center;justify-content:center}
+.teller .tel{height:92%}
+.teller.uc{gap:2cqw}
+.teller.uc .tel{height:auto;width:30%;aspect-ratio:9/19.5;border-width:1cqw;border-radius:3.6cqw}
+@media (max-width:760px){.page .ic{font-size:max(2.75cqw,11.5px)}.harita{font-size:max(2.45cqw,10.5px)}.harita div small{font-size:max(2.1cqw,9.5px)}.bolum{font-size:max(2.6cqw,11px)}}
+.liste{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.5cqh}
+.liste li{position:relative;padding-left:5.4cqw}
+.liste li::before{content:"";position:absolute;left:0;top:.5cqw;width:3.4cqw;height:3.4cqw;border-radius:1cqw;background:var(--s4)}
+.liste li::after{content:"";position:absolute;left:1.2cqw;top:1cqw;width:1cqw;height:1.9cqw;border:solid #fff;border-width:0 .55cqw .55cqw 0;transform:rotate(45deg)}
+.liste b{color:var(--lac)}
+.kutu{background:#fff;border:1px solid #d9e1ec;border-radius:2cqw;padding:3cqw 3.4cqw}
+.kutu.altin{background:#fdf3d8;border-color:#ecd28c}
+.kutu.lac{background:var(--lac);color:#e9eef8;border-color:var(--lac)}
+.kutu.lac h3{color:#fff}
+.siz{border-top:2px dashed #cfd8e6;padding-top:2cqh;color:var(--yazi2)}
+.siz b{color:#7a5608}
+.ikili{display:grid;grid-template-columns:1fr 1fr;gap:3cqw}
+.harita{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6cqw;font-size:2.45cqw}
+.harita div{background:#fff;border:1px solid #d9e1ec;border-left:1.2cqw solid var(--c,var(--lac));border-radius:1.4cqw;padding:1.4cqw 2cqw;line-height:1.25}
+.harita div small{display:block;color:var(--soluk);font-size:2.1cqw}
+.harita .tam{grid-column:1 / -1;background:#fdf3d8}
+.icindekiler{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.2cqh}
+.icindekiler button{all:unset;cursor:pointer;display:grid;grid-template-columns:7cqw 1fr auto;gap:2cqw;align-items:baseline;width:100%;padding:1.2cqh 0;border-bottom:1px dashed #cfd8e6}
+.icindekiler button:hover b{color:#7a5608}
+.icindekiler button:focus-visible{outline:2px solid var(--altin)}
+.icindekiler i{font-style:normal;font-family:var(--display);color:#7a5608;font-size:4cqw}
+.icindekiler b{font-family:var(--display);font-size:3.4cqw}
+.icindekiler span{color:var(--soluk);font-size:2.4cqw;font-variant-numeric:tabular-nums}
+/* mini maketler */
+.mini{background:#fff;border:1px solid #d9e1ec;border-radius:2cqw;overflow:hidden;box-shadow:0 2cqw 4cqw -2.5cqw rgba(20,38,69,.5);font-size:2.3cqw}
+.mini .bar{display:flex;gap:1cqw;padding:1.4cqw 2cqw;background:#eef2f8;border-bottom:1px solid #d9e1ec}
+.mini .bar i{width:1.4cqw;height:1.4cqw;border-radius:50%;background:#c9d2e0}
+.mini .gov{padding:2.6cqw 3cqw;display:flex;flex-direction:column;gap:1.4cqw}
+.mini .ogr{display:grid;grid-template-columns:22cqw 1fr;gap:3cqw;align-items:center}
+.mini .ogr img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:1.4cqw}
+.mini .k{border:1px solid #e3e8f0;border-radius:1.4cqw;padding:1.6cqw 2cqw;background:#fbfcfe}
+.mini .k b{display:block;font-family:var(--display);font-size:2.8cqw}
+.mini .soru{display:flex;justify-content:space-between;border-bottom:1px solid #e3e8f0;padding:1.4cqw 0;font-weight:600}
+.mini .soru::after{content:"+";color:var(--altin)}
+.mini .dug{align-self:flex-start;background:var(--altin);color:#1a1405;border-radius:999px;padding:1.2cqw 3cqw;font-weight:700}
+.mini .alan{border:1px solid #d9e1ec;border-radius:1.2cqw;padding:1.4cqw 2cqw;color:var(--soluk);display:flex;justify-content:space-between}
+.mini .alan b{color:var(--yazi);font-weight:600}
+/* kapaklar */
+.kapak{background:linear-gradient(135deg,#1b3362,#0f1f3d 60%,#0b1730);color:#fff}
+.kapak::before{content:"";position:absolute;inset:3.2cqw;border:1px solid rgba(232,183,70,.45);border-radius:1.6cqw;pointer-events:none}
+.kapak .ic{align-items:center;justify-content:center;text-align:center;gap:3cqh}
+.kapak .ad{background:#fbfcfe;color:var(--lac);border-radius:2cqw;padding:5cqw 6cqw 4cqw;width:78%;box-shadow:0 2cqw 4cqw -2cqw rgba(0,0,0,.5);background-image:linear-gradient(#e3eaf4 1px,transparent 1px);background-size:100% 6cqw}
+.kapak .ad img{width:56%;margin:0 auto 2cqw}
+.kapak .ad h1{font-family:var(--display);font-size:7.2cqw;margin:0;line-height:1.05}
+.kapak .ad p{font-family:var(--el);font-size:5.4cqw;color:var(--kenar);margin-top:2cqw}
+.kapak .tm{width:30%;opacity:.95}
+.kapak .alt{font-size:2.6cqw;color:#c5cfe2}
+.kapak .foto{width:78%;aspect-ratio:16/10;border-radius:2cqw;overflow:hidden;box-shadow:0 2cqw 4cqw -2cqw rgba(0,0,0,.6)}
+.kapak .foto img{width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion: reduce){.not,.gorsel .etiket{transform:none}}
+</style>
+</head>
+<body>
+<header class="ust">
+  <img src="../img/tm-beyaz.png" alt="TasarımMania" width="435" height="132">
+  <a href="../index.html">Ayrıntılı dosya</a>
+</header>
+<main class="sahne">
+<div class="kitap-kap">
+<div id="kitap">
+
+<!-- 1 ön kapak -->
+<div class="page kapak" data-density="hard"><div class="ic">
+  <div class="ad"><img src="../img/logo-yildiz.png" alt="Hakikat Öğretmen" width="240" height="124"><h1>Yapacaklarımız</h1><p>sayfa sayfa, örnekleriyle</p></div>
+  <img class="tm" src="../img/tm-beyaz.png" alt="TasarımMania" width="435" height="132">
+  <p class="alt">Kasım 2026</p>
+</div></div>
+
+<!-- 2 -->
+<div class="page kare sol"><div class="ic">
+  <span class="not">Önce bunu okuyun</span>
+  <h2>Bu kitapta ne var?</h2>
+  <p>Hakikat Öğretmen için yapacağımız her işi kendi sayfasında gösterdik. Her konunun iki sayfası var:</p>
+  <div class="ikili">
+    <div class="kutu"><h3>Sol sayfa</h3><p>Örnek tasarım. Bitmiş hâli nasıl görünecek?</p></div>
+    <div class="kutu altin"><h3>Sağ sayfa</h3><p>Orada neler olacak? Sizden ne gerekiyor?</p></div>
+  </div>
+  <p>Sayfayı çevirmek için sayfanın köşesinden tutup çekin, alttaki düğmelere basın ya da klavyedeki ok tuşlarını kullanın.</p>
+  <p style="color:var(--soluk)">Görseller örnektir. Son tasarım sizin onayınızla netleşir.</p>
+  <span class="sayfa-no">2</span>
+</div></div>
+
+<!-- 3 içindekiler -->
+<div class="page kare sag"><div class="ic">
+  <h2>İçindekiler</h2>
+  <ul class="icindekiler">
+    <li><button type="button" data-git="3"><i>1</i><b>Yeni web sitesi</b><span>4</span></button></li>
+    <li><button type="button" data-git="15"><i>2</i><b>Veli asistanı</b><span>16</span></button></li>
+    <li><button type="button" data-git="17"><i>3</i><b>Reklam sayfaları</b><span>18</span></button></li>
+    <li><button type="button" data-git="19"><i>4</i><b>Sosyal medya</b><span>20</span></button></li>
+    <li><button type="button" data-git="21"><i>5</i><b>Video ve Reels</b><span>22</span></button></li>
+    <li><button type="button" data-git="23"><i>6</i><b>Veli videoları (UGC)</b><span>24</span></button></li>
+    <li><button type="button" data-git="25"><i>7</i><b>Reklam ve kayıt yolu</b><span>26</span></button></li>
+    <li><button type="button" data-git="27"><i>8</i><b>Takvim ve ilk adım</b><span>28</span></button></li>
+  </ul>
+  <span class="sayfa-no">3</span>
+</div></div>
+
+<!-- 4 site haritası -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>1</i>Yeni web sitesi</div>
+  <h2>Yeni sitede 12 sayfa olacak</h2>
+  <div class="harita">
+    <div class="tam" style="--c:var(--altin)"><b>Ana sayfa</b><small>Öğretmen, sınıf seçici, deneme dersi</small></div>
+    <div style="--c:var(--s2)"><b>2. sınıf</b><small>Program, saat, kayıt</small></div>
+    <div style="--c:var(--s3)"><b>3. sınıf</b><small>Program, saat, kayıt</small></div>
+    <div style="--c:var(--s4)"><b>4. sınıf</b><small>Program, saat, kayıt</small></div>
+    <div style="--c:var(--s5)"><b>5. sınıf</b><small>Program, saat, kayıt</small></div>
+    <div><b>Ücretsiz deneme dersi</b><small>Tarih ve kısa form</small></div>
+    <div><b>Kamplar</b><small>Yarıyıl, Mart, yaz</small></div>
+    <div><b>Hakikat Öğretmen kimdir</b><small>Hikâye, yöntem, video</small></div>
+    <div><b>Veliler ne diyor</b><small>Yorumlar, başarılar</small></div>
+    <div><b>Soru Atölyesi</b><small>Bütün PDF'ler</small></div>
+    <div><b>Veli Rehberi</b><small>Yazılar ve videolar</small></div>
+    <div><b>Sorular · Kayıt · İletişim</b><small>SSS, ödeme, WhatsApp</small></div>
+  </div>
+  <span class="sayfa-no">4</span>
+</div></div>
+
+<!-- 5 her sayfada -->
+<div class="page kare sag"><div class="ic">
+  <h2>Her sayfada ve arka planda</h2>
+  <div class="kutu"><h3>Veli her sayfada şunları görür</h3>
+    <ul class="liste" style="margin-top:1.4cqh"><li>Sağ alt köşede <b>veli asistanı</b></li><li><b>WhatsApp</b> düğmesi</li><li>Telefonda altta sabit duran <b>kayıt düğmesi</b></li><li>"Sorunuzu öğretmene sorun" <b>video soru</b> balonu</li></ul></div>
+  <div class="kutu altin"><h3>Siz panelde şunları yönetirsiniz</h3>
+    <ul class="liste" style="margin-top:1.4cqh"><li>Bütün <b>metin, fotoğraf ve tarihler</b></li><li>Telefon, ders saatleri, kamp tarihleri tek ekranda</li><li>Formdan ve asistandan gelen <b>veli listesi</b></li><li>Hangi gönderinin <b>kayıt getirdiği</b></li></ul></div>
+  <p style="color:var(--soluk)">Site WordPress üzerinde, size özel tasarımla kurulur. Eski adresler yenilerine yönlenir.</p>
+  <span class="sayfa-no">5</span>
+</div></div>
+
+<!-- 6 ana sayfa örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>1</i>Ana sayfa</div>
+  <h2>Veli ilk ekranda sizi ve sınıfını görür</h2>
+  <div class="gorsel"><img src="g/web-ana.jpg" alt="Yeni ana sayfa örnek tasarımı" width="1300" height="833"><span class="etiket">örnek tasarım</span></div>
+  <span class="sayfa-no">6</span>
+</div></div>
+
+<!-- 7 ana sayfada olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Ana sayfada neler olacak</h2>
+  <ul class="liste">
+    <li><b>Fotoğrafınız</b> ve tek cümlelik söz: "18 yıllık öğretmeniyle, evden canlı ders"</li>
+    <li><b>Sınıf seçici:</b> 2, 3, 4, 5. Her biri kendi rengiyle</li>
+    <li><b>"32 hafta, 160 canlı ders"</b> bandı</li>
+    <li><b>Ücretsiz deneme dersi</b> düğmesi</li>
+    <li>Veli yorumları, sıradaki kamp, son Soru Atölyesi PDF'leri</li>
+    <li>Bugünkü "Sepete ekle" ve kargo yazıları <b>kalkar</b></li>
+  </ul>
+  <div class="siz"><b>Sizden:</b> tahta başında 2-3 fotoğraf ve kısa bir video.</div>
+  <span class="sayfa-no">7</span>
+</div></div>
+
+<!-- 8 sınıf sayfası örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>1</i>Sınıf sayfası</div>
+  <h2>Her sınıfın kendi sayfası</h2>
+  <div class="gorsel"><img src="g/sinif.jpg" alt="4. sınıf sayfası örneği, sekiz parçasıyla" width="940" height="1534"><span class="etiket">4. sınıf örneği</span></div>
+  <span class="sayfa-no">8</span>
+</div></div>
+
+<!-- 9 sınıf sayfasında olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Sınıf sayfasında neler olacak</h2>
+  <ul class="liste">
+    <li><b>Program:</b> başlangıç-bitiş tarihi, hafta ve ders sayısı</li>
+    <li><b>Ders günleri ve saatleri</b> yazıyla, Google da okur</li>
+    <li><b>Dersler ve konular</b>, MEB programıyla eşleşir</li>
+    <li><b>Bir hafta nasıl geçer:</b> canlı ders, kayıt, PDF ödev</li>
+    <li><b>Dersten 60 saniye:</b> sizin gerçek ders videonuz</li>
+    <li><b>O sınıfın veli yorumları</b>, izinli</li>
+    <li><b>Sorular:</b> grup kaç kişi, ders kaçarsa, iade, taksit</li>
+    <li><b>Kayıt kutusu:</b> fiyat, taksit, kayıt ve WhatsApp</li>
+  </ul>
+  <div class="siz"><b>Sizden:</b> her sınıfın konu listesi ve kuralları (grup, telafi, iade).</div>
+  <span class="sayfa-no">9</span>
+</div></div>
+
+<!-- 10 deneme dersi ve kamp örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>1</i>Deneme dersi ve kamplar</div>
+  <h2>Kayıt bir dakika sürer</h2>
+  <div class="gorsel"><div class="teller"><div class="tel"><img src="g/l-deneme-dersi.jpg" alt="Deneme dersi sayfası telefonda" width="780" height="1688"></div><div class="tel"><img src="g/l-yariyil-kampi.jpg" alt="Yarıyıl kampı sayfası telefonda" width="780" height="1688"></div></div><span class="etiket">telefonda</span></div>
+  <span class="sayfa-no">10</span>
+</div></div>
+
+<!-- 11 deneme dersi olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Deneme dersi ve kamp sayfalarında</h2>
+  <div class="gorsel" style="flex:0 0 38%"><img src="g/form.jpg" alt="Deneme dersi kayıt formu" width="880" height="1048"></div>
+  <ul class="liste">
+    <li>Sıradaki dersin <b>tarihi ve saati</b></li>
+    <li>Kısa form: <b>sınıf, ad, telefon, izin</b></li>
+    <li>Kayıttan sonra <b>WhatsApp onayı</b>, dersten önce hatırlatma</li>
+    <li>Kamplarda: tarih, program, ön kayıt</li>
+  </ul>
+  <span class="sayfa-no">11</span>
+</div></div>
+
+<!-- 12 öğretmen + veliler mini maket -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>1</i>Siz ve veliler</div>
+  <h2>"Hakikat Öğretmen kimdir" ve "Veliler ne diyor"</h2>
+  <div class="mini"><div class="bar"><i></i><i></i><i></i></div><div class="gov">
+    <div class="ogr"><img src="../img/video4.jpg" alt="" width="406" height="720"><div><b style="font-family:var(--display);font-size:3.6cqw">Hakikat Öğretmen</b><p>Meslekte 18. yıl. 2-5. sınıf Matematik ve Türkçe. Hikâyem, ders anlatma yöntemim ve bir dersten kısa bir video.</p></div></div>
+  </div></div>
+  <div class="mini"><div class="bar"><i></i><i></i><i></i></div><div class="gov">
+    <div class="ikili"><div class="k"><b>Veli yorumu</b>Gerçek yorum, yazılı izinle</div><div class="k"><b>Video yorum</b>Velinin 30 saniyelik videosu</div></div>
+    <div class="k"><b>Başarılar</b>Öğrenci başarıları, veli izniyle ve adsız</div>
+  </div></div>
+  <span class="sayfa-no">12</span>
+</div></div>
+
+<!-- 13 soru atölyesi + rehber + sss -->
+<div class="page kare sag"><div class="ic">
+  <h2>Soru Atölyesi, Veli Rehberi, Sorular</h2>
+  <div class="gorsel" style="flex:0 0 auto"><img src="g/arsiv.jpg" alt="Soru Atölyesi PDF arşivi" width="1300" height="247"></div>
+  <ul class="liste">
+    <li><b>Soru Atölyesi:</b> bütün PDF'ler sınıfa ve konuya göre, iletişim izniyle indirilir</li>
+    <li><b>Veli Rehberi:</b> e-kayıt, şube, karne ve konu çalışma yazıları, her biri kendi videosuyla</li>
+  </ul>
+  <div class="mini"><div class="gov"><b style="font-family:var(--display);font-size:3cqw">Sık sorulan sorular</b><div class="soru">Taksit yapılıyor mu?</div><div class="soru">Ders kaçarsa ne olur?</div><div class="soru">Grup kaç kişi?</div></div></div>
+  <span class="sayfa-no">13</span>
+</div></div>
+
+<!-- 14 kayıt ödeme -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>1</i>Kayıt ve ödeme</div>
+  <h2>Sepet yok, tek adımda kayıt</h2>
+  <div class="mini"><div class="bar"><i></i><i></i><i></i></div><div class="gov">
+    <b style="font-family:var(--display);font-size:3.6cqw">4. Sınıf Yıllık Program</b>
+    <div class="alan">Program<b>21 Eylül - 5 Haziran</b></div>
+    <div class="alan">Ödeme<b>Taksit seçenekleriyle</b></div>
+    <div class="alan">Veli adı<b>...</b></div>
+    <div class="alan">Telefon<b>...</b></div>
+    <div class="alan" style="color:var(--yazi2)">Sözleşmeyi ve aydınlatma metnini okudum</div>
+    <span class="dug">Kaydı tamamla</span>
+  </div></div>
+  <ul class="liste"><li>Bugünkü ödeme sağlayıcınız bağlanır, taksitler korunur</li><li>WhatsApp'tan kayıt da açık kalır</li></ul>
+  <span class="sayfa-no">14</span>
+</div></div>
+
+<!-- 15 panel -->
+<div class="page kare sag"><div class="ic">
+  <h2>Siz neyi değiştirebilirsiniz?</h2>
+  <p>Hepsini. Panelde değiştirdiğiniz bilgi sitede hemen görünür, kaydetmek hiçbir şeyi bozmaz.</p>
+  <div class="mini"><div class="bar"><i></i><i></i><i></i></div><div class="gov">
+    <b style="font-family:var(--display);font-size:3.2cqw">Site ayarları</b>
+    <div class="alan">WhatsApp<b>0551 354 12 05</b></div>
+    <div class="alan">Sıradaki deneme dersi<b>Aralık 2026, 19.00</b></div>
+    <div class="alan">Yarıyıl kampı<b>25 Ocak - 5 Şubat</b></div>
+    <div class="alan">4. sınıf saatleri<b>Pzt, Salı, Prş</b></div>
+    <span class="dug">Kaydet</span>
+  </div></div>
+  <p style="color:var(--soluk)">Örnek: kamp tarihini burada değiştirirsiniz, bütün sayfalarda birlikte değişir.</p>
+  <span class="sayfa-no">15</span>
+</div></div>
+
+<!-- 16 asistan örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>2</i>Veli asistanı</div>
+  <h2>Gece de cevap veren asistan</h2>
+  <div class="gorsel"><img src="g/asistan-sohbet.jpg" alt="Asistanla örnek konuşma" width="994" height="1122"><span class="etiket">örnek konuşma</span></div>
+  <span class="sayfa-no">16</span>
+</div></div>
+
+<!-- 17 asistan olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Asistan ne yapar?</h2>
+  <ul class="liste">
+    <li>Ders günleri, saatler, kamp tarihleri, kayıt adımları gibi <b>soruları cevaplar</b></li>
+    <li>"Kesirleri evde nasıl çalıştırırım?" gibi <b>konu sorularına</b> yaşa uygun cevap verir</li>
+    <li><b>Fiyat söylemez</b>, kayıt sayfasına yönlendirir</li>
+    <li>Velinin adı, telefonu ve sınıfını <b>izinle alır</b>, size iletir</li>
+    <li>Çocuğun adını, okulunu ya da sağlık bilgisini <b>sormaz</b></li>
+  </ul>
+  <div class="gorsel" style="flex:0 0 30%"><img src="g/panel.jpg" alt="Talep listesi ekranı" width="1040" height="756"></div>
+  <div class="siz"><b>Sizden:</b> sık sorulan 20 sorunun cevabı. Gerisini biz yazarız, siz onaylarsınız.</div>
+  <span class="sayfa-no">17</span>
+</div></div>
+
+<!-- 18 reklam sayfaları örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>3</i>Reklam sayfaları</div>
+  <h2>Her reklamın kendi sayfası</h2>
+  <div class="gorsel"><div class="teller uc"><div class="tel"><img src="g/l-yariyil-kampi.jpg" alt="Yarıyıl kampı sayfası" width="780" height="1688"></div><div class="tel"><img src="g/l-deneme-dersi.jpg" alt="Deneme dersi sayfası" width="780" height="1688"></div><div class="tel"><img src="g/l-soru-atolyesi.jpg" alt="Soru Atölyesi PDF sayfası" width="780" height="1688"></div></div></div>
+  <span class="sayfa-no">18</span>
+</div></div>
+
+<!-- 19 reklam olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Reklamdan kayda</h2>
+  <div class="ikili" style="align-items:start"><div class="gorsel"><img src="g/meta-ad.jpg" alt="Instagram reklamı örneği" width="802" height="1428"></div><div style="display:flex;flex-direction:column;gap:2cqh"><img src="g/google-ad.jpg" alt="Google reklamı örneği" width="1062" height="388" style="width:100%;border-radius:1.6cqw"><ul class="liste"><li><b>Yarıyıl kampı:</b> Instagram'dan ön kayıt</li><li><b>Deneme dersi:</b> Google'dan kayıt</li><li><b>PDF:</b> yorumdan listeye</li></ul></div></div>
+  <ul class="liste"><li>Sayfada menü yok, <b>tek düğme</b> ve kısa form var</li><li>Hangi reklamın kaç kayıt getirdiği <b>ölçülür</b></li></ul>
+  <span class="sayfa-no">19</span>
+</div></div>
+
+<!-- 20 sosyal medya örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>4</i>Sosyal medya</div>
+  <h2>Tek görünüş, sınıfa göre renk</h2>
+  <div class="gorsel" style="flex:0 0 auto"><img src="g/postlar.jpg" alt="Üç gönderi şablonu" width="1300" height="525"></div>
+  <div class="ikili" style="flex:1;min-height:0"><div class="gorsel"><img src="g/profil.jpg" alt="Instagram profil düzeni örneği" width="540" height="1142"></div><div class="gorsel"><img src="g/dm.jpg" alt="Otomatik mesaj örneği" width="840" height="706"></div></div>
+  <span class="sayfa-no">20</span>
+</div></div>
+
+<!-- 21 sosyal medya olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Hesaplarda neler olacak</h2>
+  <ul class="liste">
+    <li>Her kanalda <b>aynı ad, aynı logo, aynı deneyim yılı</b></li>
+    <li><b>6 gönderi şablonu:</b> Soru Atölyesi, veli rehberi, başarı, kamp, yorum, video kapağı</li>
+    <li>"PDF" yazana <b>otomatik mesaj</b>: PDF sitede, veli listeye katılır</li>
+    <li>Haftada <b>4 video</b>, 2-3 gönderi, her gün hikâye</li>
+    <li>Ayda bir <b>canlı yayın</b>, her ay bir sayfa <b>rapor</b></li>
+  </ul>
+  <div class="gorsel" style="flex:0 0 auto"><img src="g/hafta.jpg" alt="Haftalık paylaşım akışı" width="1300" height="146"></div>
+  <div class="siz"><b>Sizden:</b> her ayın konu listesine onay.</div>
+  <span class="sayfa-no">21</span>
+</div></div>
+
+<!-- 22 video örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>5</i>Video ve Reels</div>
+  <h2>Tahta, kamera ve 60 saniye</h2>
+  <div class="gorsel" style="flex:1"><div class="teller"><div class="tel"><img src="../img/video5.jpg" alt="Tahta başında ders videosu karesi" width="406" height="720" style="object-position:center"></div></div><span class="etiket">sizin videonuzdan</span></div>
+  <div class="gorsel" style="flex:0 0 auto"><img src="g/senaryo.jpg" alt="Bir Reels'in saniye saniye senaryosu" width="1300" height="236"></div>
+  <span class="sayfa-no">22</span>
+</div></div>
+
+<!-- 23 video olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Her ay neler çekilecek</h2>
+  <ul class="liste">
+    <li>Ayda <b>2 çekim günü</b>, her gün 8-10 kısa video</li>
+    <li>Senaryolar <b>bir hafta önce</b> size gelir</li>
+    <li>Çekim <b>evdeki ders köşenizde</b>, kadrajda okul ve öğrenci yok</li>
+    <li>Her videoya <b>altyazı, kapak</b> ve kanala göre kesim</li>
+    <li>Haftada 1 <b>YouTube konu anlatımı</b></li>
+  </ul>
+  <div class="kutu lac"><h3>Bir çekim günü</h3><p>30 dakika kurulum, 2,5-3 saat çekim. Işık, mikrofon ve kurguyu biz yaparız.</p></div>
+  <div class="siz"><b>Sizden:</b> ayda iki öğleden sonra.</div>
+  <span class="sayfa-no">23</span>
+</div></div>
+
+<!-- 24 ugc örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>6</i>Veli videoları</div>
+  <h2>Veli sorar, siz cevaplarsınız</h2>
+  <div class="gorsel"><img src="g/videosoru.jpg" alt="Video soru akışı: öğretmen sorar, veli kaydeder, izinle paylaşılır" width="1300" height="715"></div>
+  <div class="ikili"><div class="gorsel"><img src="../img/hf/ugc-odev.jpg" alt="Çözülmüş ödev kâğıdı" width="900" height="1125" style="max-height:26cqh"></div><div class="gorsel"><img src="../img/hf/ugc-telefon.jpg" alt="Velinin telefonla video çekmesi" width="900" height="2084" style="max-height:26cqh"></div></div>
+  <span class="sayfa-no">24</span>
+</div></div>
+
+<!-- 25 ugc olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Velilerden gelecek içerikler</h2>
+  <ul class="liste">
+    <li><b>Velinin sorusu, sizin cevabınız:</b> haftalık Reels</li>
+    <li><b>"Bu yıl ne değişti?":</b> dönem sonunda 30 saniyelik veli videosu</li>
+    <li><b>Ders köşemiz:</b> çalışma masası fotoğrafları</li>
+    <li><b>Soru Atölyesi'ni bitirdik:</b> elde tutulan ödev</li>
+    <li><b>Mezun velisinden:</b> dört yıl bir dakikada</li>
+  </ul>
+  <div class="kutu altin"><h3>Kural</h3><p>Çocuğun yüzü, adı, okulu paylaşılmaz. Paylaşım izni ayrı alınır ve istenince kaldırılır.</p></div>
+  <span class="sayfa-no">25</span>
+</div></div>
+
+<!-- 26 pazarlama örnek -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>7</i>Reklam ve kayıt yolu</div>
+  <h2>İlk PDF'ten yıllık kayda</h2>
+  <div class="gorsel" style="flex:0 0 auto"><img src="g/huni.jpg" alt="Velinin beş basamaklı yolculuğu" width="1300" height="465"></div>
+  <div class="gorsel"><img src="g/wa-akis.jpg" alt="Deneme dersinden sonra WhatsApp mesajları" width="840" height="972"></div>
+  <span class="sayfa-no">26</span>
+</div></div>
+
+<!-- 27 pazarlama olacaklar -->
+<div class="page kare sag"><div class="ic">
+  <h2>Neler kurulacak</h2>
+  <ul class="liste">
+    <li><b>Instagram ve Google reklamları</b>, veliye yönelik</li>
+    <li>Deneme dersinden sonra <b>3 WhatsApp mesajı</b></li>
+    <li>Bütçe sezona göre: <b>Ocak</b> yarıyıl, <b>Haziran-Ağustos</b> erken kayıt</li>
+    <li>Her ay: liste, deneme dersi, kayıt ve <b>kayıt başına maliyet</b></li>
+    <li>Erken yenileme ve <b>arkadaşını getir</b></li>
+  </ul>
+  <div class="siz"><b>Sizden:</b> aylık reklam bütçesi ve kampanya koşulları.</div>
+  <span class="sayfa-no">27</span>
+</div></div>
+
+<!-- 28 takvim -->
+<div class="page kare sol"><div class="ic">
+  <div class="bolum"><i>8</i>Takvim</div>
+  <h2>Aralık'tan Eylül'e</h2>
+  <div class="gorsel" style="flex:0 0 auto"><img src="g/yol.jpg" alt="Aylara göre yol haritası" width="1300" height="611"></div>
+  <ul class="liste"><li><b>Aralık:</b> kimlik, yeni site, yarıyıl kampı sayfası</li><li><b>Ocak:</b> karne ve yarıyıl kampı</li><li><b>Mart:</b> ara tatil kampı (8-12 Mart)</li><li><b>Mayıs-Ağustos:</b> erken kayıt ve yaz kampı</li></ul>
+  <span class="sayfa-no">28</span>
+</div></div>
+
+<!-- 29 ilk adım -->
+<div class="page kare sag"><div class="ic">
+  <h2>İlk adım: bir saatlik toplantı</h2>
+  <div class="kutu altin"><h3>Birlikte karar vereceğimiz üç şey</h3><ul class="liste" style="margin-top:1.4cqh"><li>Kayıtlar hangi kurum adına alınacak</li><li>Marka adı: önde "Hakikat Öğretmen"</li><li>Aylık reklam bütçesi ve çekim günleri</li></ul></div>
+  <div class="kutu"><h3>Sizden gerekenler</h3><ul class="liste" style="margin-top:1.4cqh"><li>Hesap ve alan adı erişimleri</li><li>Fotoğraflar, ders videoları, veli yorumları</li><li>Sınıf programları ve kurallar</li></ul></div>
+  <span class="not">Gerisi bizde.</span>
+  <span class="sayfa-no">29</span>
+</div></div>
+
+<!-- 30 arka kapak -->
+<div class="page kapak" data-density="hard"><div class="ic">
+  <div class="foto"><img src="../img/hf/kapak.jpg" alt="Akşam ders masası" width="1800" height="1018"></div>
+  <p style="font-family:var(--display);font-size:5cqw;margin:0">İnanırsan başarırsın.</p>
+  <img class="tm" src="../img/tm-beyaz.png" alt="TasarımMania" width="435" height="132">
+  <p class="alt">Ayrıntılı dosya: hakikat-ogretmen-dosya</p>
+</div></div>
+
+</div>
+</div>
+<div class="kontrol">
+  <button type="button" class="ikinci" id="geri" aria-label="Önceki sayfa">Önceki</button>
+  <span id="sayac" aria-live="polite">Kapak</span>
+  <button type="button" id="ileri" aria-label="Sonraki sayfa">Sonraki</button>
+  <button type="button" class="ikinci" id="basa">İçindekiler</button>
+</div>
+<p class="ipucu">Köşeden tutup çekin, düğmeleri ya da ok tuşlarını kullanın.</p>
+</main>
+<script src="page-flip.browser.js"></script>
+<script>
+(function(){
+  var kap=document.getElementById('kitap');
+  var dar=window.matchMedia('(max-width: 760px)').matches;
+  var az=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pf=new St.PageFlip(kap,{width:550,height:740,size:'stretch',minWidth:260,maxWidth:620,minHeight:350,maxHeight:840,
+    showCover:true,usePortrait:true,mobileScrollSupport:false,maxShadowOpacity:.45,flippingTime:az?250:850,
+    clickEventForward:true,useMouseEvents:true,swipeDistance:24,startZIndex:2,autoSize:true,drawShadow:true});
+  pf.loadFromHTML(document.querySelectorAll('#kitap .page'));
+  var top=pf.getPageCount(), geri=document.getElementById('geri'), ileri=document.getElementById('ileri'), sayac=document.getElementById('sayac');
+  function yaz(){var i=pf.getCurrentPageIndex();sayac.textContent=i===0?'Kapak':(i>=top-1?'Arka kapak':('Sayfa '+(i+1)+' / '+top));geri.disabled=i===0;ileri.disabled=i>=top-1;}
+  pf.on('flip',yaz);pf.on('changeOrientation',yaz);yaz();
+  geri.addEventListener('click',function(){pf.flipPrev();});
+  ileri.addEventListener('click',function(){pf.flipNext();});
+  document.getElementById('basa').addEventListener('click',function(){pf.flip(2);});
+  document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')pf.flipNext();if(e.key==='ArrowLeft')pf.flipPrev();});
+  [].forEach.call(document.querySelectorAll('[data-git]'),function(b){b.addEventListener('click',function(e){e.stopPropagation();pf.flip(parseInt(b.dataset.git,10));});});
+  window.kitap=pf;
+})();
+</script>
+</body>
+</html>
